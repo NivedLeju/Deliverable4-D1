@@ -53,7 +53,15 @@ The main project built in Jenkins
 
 ## Design Part
 
-Image below shows build success after uploading latest Binary Calculator Project to repository and the build number shows the continous  deployment
+### Part 1
+Image below shows build success after uploading latest Binary Calculator Project to repository and the build number shows the continous deployment for the BinaryCalculate_mvn
 
 ![Image5.png](figures/Image5.png)
+
+
+### Part 2
+Image below shows the successful implementation of the BinaryCalculator_pipeline to continously deploy to GKE
+
+![Image11.png](figues/image11.png)
+
 
