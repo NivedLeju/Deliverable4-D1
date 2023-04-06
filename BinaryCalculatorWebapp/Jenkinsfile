@@ -22,8 +22,14 @@ pipeline {
     }
     stage ('Deploy') {
       steps {
-        sh 'echo "bye bye"'
-      }
+                // Authenticate with Google Cloud and set the correct cluster context
+                withCredentials([gcpServiceAccount(credentialsId: '106904043824582095378', scope: 'https://www.googleapis.com/auth/cloud-platform')]) {
+                    sh "gcloud auth activate-service-account --key-file=${gcpCredentials}"
+                    sh "gcloud container clusters get-credentials ${GCP_CLUSTER} --zone=${GCP_ZONE} --project=${GCP_PROJECT}"
+                }
+                // Deploy your Docker image to the GKE cluster
+                sh "kubectl set image deployment/${IMAGE_NAME} ${IMAGE_NAME}=${DOCKER_REGISTRY}/${IMAGE_NAME}:${BUILD_NUMBER} --namespace=${NAMESPACE}"
+            }
     }
   }
 }
