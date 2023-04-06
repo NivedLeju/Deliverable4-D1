@@ -1,5 +1,44 @@
 pipeline {
-  agent any
+  environment {
+    ////PROJECT = "REPLACE_WITH_YOUR_PROJECT_ID"
+	PROJECT = "d4-groupd1"
+    APP_NAME = "binary-calculator2"
+	//CLUSTER = "REPLACE_WITH_YOUR_CLUSTER_NAME"
+    CLUSTER = "sofe3980u"
+    CLUSTER_ZONE = "northamerica-northeast1-b"
+    IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}"
+    JENKINS_CRED = "d4-groupd1"
+  }
+  
+agent {
+    kubernetes {
+      label 'topology.gke.io/zone=northamerica-northeast1-b'
+      defaultContainer 'jnlp'
+      yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+labels:
+  component: ci
+spec:
+  # Use service account that can deploy to all namespaces
+  serviceAccountName: cd-jenkins
+  containers:
+  - name: gcloud
+    image: gcr.io/cloud-builders/gcloud
+    //image: google/cloud-sdk:latest
+    command:
+    - cat
+    tty: true
+  - name: kubectl
+    image: gcr.io/cloud-builders/kubectl
+    command:
+    - cat
+    tty: true
+"""
+}
+
+  }
   tools {
     maven 'maven' 
   }
