@@ -65,3 +65,7 @@ Image below shows the successful implementation of the BinaryCalculator_pipeline
 ![image11.png](figues/image11.png)
 
 
+This final image shows that the both jobs executed together, and shows build success
+
+[!image12.png](figures/image12.png)
+
