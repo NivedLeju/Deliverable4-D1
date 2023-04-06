@@ -50,3 +50,10 @@ Creating and connecting webhook from Jenkins to Github repository
 The main project built in Jenkins
 
 ![image3.png](figures/image3.png)
+
+## Design Part 1
+
+Image below shows build success after uploading latest Binary Calculator Project to repository 
+
+![Image5.png](figures/Image5.png)
+
