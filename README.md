@@ -5,3 +5,5 @@
 3. Configure a continuous integration pipeline for a Jenkins job.
 4. Configure a continuous deployment pipeline for a Jenkins job.
 
+## Images showing the steps used to setup the project
+![image9.png]
