@@ -62,10 +62,14 @@ Image below shows build success after uploading latest Binary Calculator Project
 ### Part 2
 Image below shows the successful implementation of the BinaryCalculator_pipeline to continously deploy to GKE
 
-![image11.png](figures/image11.png)
+![image13.png](figures/image13.png)
 
 
-This final image shows that the both jobs executed together, and shows build success
+This image shows that the both jobs executed together, and shows build success
 
 ![image12.png](figures/image12.png)
 
+
+This image shows that the kubernetes engine is processing the information sent to the cluster from the jenkins builds
+
+!image11.png](figures/image11.png)
