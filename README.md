@@ -6,4 +6,4 @@
 4. Configure a continuous deployment pipeline for a Jenkins job.
 
 ## Images showing the steps used to setup the project
-![image9.png] (figures/image9.png)
+![image9.png](figures/image9.png)
