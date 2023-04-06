@@ -51,9 +51,9 @@ The main project built in Jenkins
 
 ![image3.png](figures/image3.png)
 
-## Design Part 1
+## Design Part
 
-Image below shows build success after uploading latest Binary Calculator Project to repository 
+Image below shows build success after uploading latest Binary Calculator Project to repository and the build number shows the continous  deployment
 
 ![Image5.png](figures/Image5.png)
 
