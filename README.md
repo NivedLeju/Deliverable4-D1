@@ -8,6 +8,7 @@
 ## Images showing the steps used to setup the project
 
 created Kubernetes cluster in the GCP Kubernetes Engine API
+
 ![image9.png](figures/image9.png)
 
 ![image6.png](figures/image6.png)
