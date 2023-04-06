@@ -62,10 +62,10 @@ Image below shows build success after uploading latest Binary Calculator Project
 ### Part 2
 Image below shows the successful implementation of the BinaryCalculator_pipeline to continously deploy to GKE
 
-![image11.png](figues/image11.png)
+![image11.png](figures/image11.png)
 
 
 This final image shows that the both jobs executed together, and shows build success
 
-[!image12.png](figures/image12.png)
+![image12.png](figures/image12.png)
 
