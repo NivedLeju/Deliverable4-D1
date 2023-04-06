@@ -60,8 +60,14 @@ spec:
     }
     stage('Build and push image with Container Builder') {
       steps {
-        container('gcloud') {
-          sh "/builder/google-cloud-sdk/bin/gcloud builds submit -t ${IMAGE_TAG} ./BinaryCalculatorWebapp/"
+        container('kubectl') {
+          withCredentials([googleServiceAccount(credentialsId: '106904043824582095378', projectId: 'd4-groupd1')]) {
+            sh """
+	      gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
+              /builder/kubectl apply -f ./YAML/binarycalculator-deployment.yaml --record
+              /builder/kubectl set image deployment/${APP_NAME} ${APP_NAME}=${IMAGE_TAG}:${BUILD_NUMBER} --record
+            """
+          }
         }
       }
     }
