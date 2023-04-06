@@ -11,6 +11,9 @@ created Kubernetes cluster in the GCP Kubernetes Engine API
 
 ![image9.png](figures/image9.png)
 
+
+obtaining cluster information to make sure the cluster is connected using the google cloud sdk
+
 ![image6.png](figures/image6.png)
 
 ![image2.png](figures/image2.png)
